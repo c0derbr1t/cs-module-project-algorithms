@@ -20,6 +20,7 @@ Returns: an integer
             # if index is not equal to index + 1
                 # return item
 
+# first attempt
 """
 from sorting import merge_sort
 
@@ -61,9 +62,10 @@ def single_number(arr):
     # maybe no need to import
     # use count() during for loop to determine if there is more than one of a given number
 
-    # for item in arr
-        # if arr.count(item) == 1:
+    # for each item in list
+        # if arr.count(item) is equal to 1
             # return item
+
 
 def single_number(arr):
 # 💫 EXECUTE 2.0
@@ -89,4 +91,23 @@ if __name__ == '__main__':
 
 """
 - It is much easier to code without a migraine 🤣
+"""
+
+
+"""
+From class: bitmasking???
+a = 0
+    for i in arr:
+        a ^= i
+    return a
+
+
+From class: other option from a student using a list.
+nums = []
+for i in arr:
+    if i in nums:
+        nums.remove(i)
+    else:
+        nums.append(i)
+return nums.pop()
 """
