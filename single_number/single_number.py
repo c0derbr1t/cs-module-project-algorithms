@@ -66,7 +66,7 @@ def single_number(arr):
         # if arr.count(item) is equal to 1
             # return item
 
-
+# O(n^2) time, O(1) space
 def single_number(arr):
 # 💫 EXECUTE 2.0
     for item in arr:
