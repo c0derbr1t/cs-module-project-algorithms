@@ -57,7 +57,7 @@ def product_of_all_other_numbers(arr):
     # return the array that is built
 
 import math
-
+# O(n^2) time, O(n)
 def product_of_all_other_numbers(arr):
 # 💫 EXECUTE 2.0
     multiplied = []

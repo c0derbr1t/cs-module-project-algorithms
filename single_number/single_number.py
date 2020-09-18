@@ -20,6 +20,7 @@ Returns: an integer
             # if index is not equal to index + 1
                 # return item
 
+# first attempt
 """
 from sorting import merge_sort
 
@@ -61,15 +62,36 @@ def single_number(arr):
     # maybe no need to import
     # use count() during for loop to determine if there is more than one of a given number
 
-    # for item in arr
-        # if arr.count(item) == 1:
+    # for each item in list
+        # if arr.count(item) is equal to 1
             # return item
 
-def single_number(arr):
+# O(n^2) time, O(1) space
+def single_number_1(arr):
 # 💫 EXECUTE 2.0
     for item in arr:
         if arr.count(item) == 1:
             return item
+
+# O(n) time and space
+def single_number(arr):
+    # use a set instead of an array
+    nums = set()
+
+    # still use a for loop @ O(n)
+        # but searching for an item in a set is only O(1)
+            # nums.remove(item) is O(1)
+        # else
+            # nums.add(item) is O(1) also
+    # return nums.pop() -> popping off the last (or only) item in a set is also O(1)
+    for item in arr:
+        if item in nums:
+            nums.remove(item)
+
+        else:
+            nums.add(item)
+
+    return nums.pop()
 
 
 if __name__ == '__main__':
@@ -89,4 +111,23 @@ if __name__ == '__main__':
 
 """
 - It is much easier to code without a migraine 🤣
+"""
+
+
+"""
+From class: bitmasking???
+a = 0
+    for i in arr:
+        a ^= i
+    return a
+
+
+From class: other option from a student using a list.
+nums = []
+for i in arr:
+    if i in nums:
+        nums.remove(i)
+    else:
+        nums.append(i)
+return nums.pop()
 """

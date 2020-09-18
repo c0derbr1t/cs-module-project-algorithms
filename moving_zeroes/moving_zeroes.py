@@ -47,6 +47,7 @@ def moving_zeroes(arr):
 # 🧩 PLAN 2.0
     # First did not work, so using list comprehension and then extending the first list.
 
+# O(n) {O(2n)} time and space
 def moving_zeroes(arr):
 # 💫 EXECUTE 2.0
 
