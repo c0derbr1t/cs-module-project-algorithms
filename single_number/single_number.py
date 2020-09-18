@@ -67,11 +67,31 @@ def single_number(arr):
             # return item
 
 # O(n^2) time, O(1) space
-def single_number(arr):
+def single_number_1(arr):
 # 💫 EXECUTE 2.0
     for item in arr:
         if arr.count(item) == 1:
             return item
+
+# O(n) time and space
+def single_number(arr):
+    # use a set instead of an array
+    nums = set()
+
+    # still use a for loop @ O(n)
+        # but searching for an item in a set is only O(1)
+            # nums.remove(item) is O(1)
+        # else
+            # nums.add(item) is O(1) also
+    # return nums.pop() -> popping off the last (or only) item in a set is also O(1)
+    for item in arr:
+        if item in nums:
+            nums.remove(item)
+
+        else:
+            nums.add(item)
+
+    return nums.pop()
 
 
 if __name__ == '__main__':
