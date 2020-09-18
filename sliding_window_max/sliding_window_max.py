@@ -25,7 +25,7 @@ Returns: a List of integers
         # a + 1
         # b + 1
 
-
+# O(n*k) time, O(n)
 def sliding_window_max(nums, k):
 # 💫 EXECUTE
     max_nums = []
